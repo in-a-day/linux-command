@@ -1,0 +1,26 @@
+文件搜索命令:
+locate:
+locate 搜索文件名
+在后台数据库中按文件名搜索
+/var/lib/mlocate : locate搜索数据库位置
+updatedb 更新数据库, 默认更新为一天一更新
+搜索较快,只能搜索文件名
+搜索遵循配置文件: 
+	/etc/updatedb.conf
+
+find:
+find [搜索范围] [options] [搜索名]
+
+
+grep:
+grep [options] 搜索信息 文件名
+查找文件中的信息, 包含匹配,只要包含就显示整行, 使用正则表达式进行匹配
+
+搜索命令的命令:
+whereis [options] 命令
+搜索系统命令所在路径及帮助文档
+	-b : 只查找可执行文件
+	-m : 只查找帮助文档
+
+which 命令:
+命令所在位置,及命令的别名
