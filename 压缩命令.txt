@@ -1,44 +1,44 @@
 常见压缩格式:
-	.zip .rar .7z
-	.tar.gz .gz .bz2 .tar.bz2
+    .zip .rar .7z
+    .tar.gz .gz .bz2 .tar.bz2
 
 .zip格式压缩:
-	zip 压缩文件名 源文件
-	zip -r 压缩文件名 源目录
-	unzip 文件
+    zip 压缩文件名 源文件
+    zip -r 压缩文件名 源目录
+    unzip 文件
 
 .gzip格式压缩
-	压缩:
-	gzip 源文件 : 源文件会消失
-	gzip -c 源文件 > 压缩文件 : 保留源文件
-	gzip -r 目录 : 会将目录下的所有子文件, 不能压缩目录
-	解压:
-	gzip -d 压缩包
-	gunzip 压缩包  : 都不会保存压缩包
-	gunzip -r 目录:　解压目录
+    压缩:
+    gzip 源文件 : 源文件会消失
+    gzip -c 源文件 > 压缩文件 : 保留源文件
+    gzip -r 目录 : 会将目录下的所有子文件, 不能压缩目录
+    解压:
+    gzip -d 压缩包
+    gunzip 压缩包  : 都不会保存压缩包
+    gunzip -r 目录:　解压目录
 
 .bz2格式压缩
-	bzip2 源文件	: 不保留源文件
-	bzip2 -k 源文件　: 保留源文件
-	不支持压缩目录
-	解压:
-	bzip2 -d 压缩文件
-	bunzip2 压缩文件
+    bzip2 源文件    : 不保留源文件
+    bzip2 -k 源文件　: 保留源文件
+    不支持压缩目录
+    解压:
+    bzip2 -d 压缩文件
+    bunzip2 压缩文件
 
 打包命令tar
 tar -cvf 打包文件名 源文件
-	-c: 打包
-	-v: 显示过程
-	-f: 指定打包后的文件名
-	-x: 解打包, tar -xvf 压缩文件
-	-t: 查看压缩包
+    -c: 打包
+    -v: 显示过程
+    -f: 指定打包后的文件名
+    -x: 解打包, tar -xvf 压缩文件
+    -t: 查看压缩包
 
 .tar.gz格式压缩
-	tar -zcvf 压缩包名 源文件
-	tar -zxvf 压缩包名 [-C 解压缩目录]
-	tar -ztvf 压缩包名	
+    tar -zcvf 压缩包名 源文件
+    tar -zxvf 压缩包名 [-C 解压缩目录]
+    tar -ztvf 压缩包名    
 
 .tar.gz2格式压缩:
-	tar -jcvf 压缩包名 源文件
-	tar -jxvf 压缩包名 [-C 解压缩目录]
-	tar -jtvf 压缩包名
+    tar -jcvf 压缩包名 源文件
+    tar -jxvf 压缩包名 [-C 解压缩目录]
+    tar -jtvf 压缩包名
