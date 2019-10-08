@@ -1,0 +1,9 @@
+" 显示行号
+set nu
+" 显示补全菜单
+set wildmenu tab 
+set wildmode=full 
+" 保存的Ex命令数量, 默认20条(推出vim后仍然存在)
+set history=200 
+" 修改缓冲区不保存, 取消提示
+set hidden
