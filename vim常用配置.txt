@@ -1,9 +1,24 @@
-" 显示行号
+"显示行号
 set nu
-" 显示补全菜单
+"显示补全菜单
 set wildmenu tab 
 set wildmode=full 
-" 保存的Ex命令数量, 默认20条(推出vim后仍然存在)
+"保存的Ex命令数量, 默认20条(推出vim后仍然存在)
 set history=200 
-" 修改缓冲区不保存, 取消提示
+"修改缓冲区不保存, 取消提示
 set hidden
+"在配对的关键字之间跳转(默认插件)
+runtime macros/matchit.vim
+"关闭vim提示音
+set visualbell
+
+
+
+
+
+
+
+
+
+"可下载插件
+" Surround.vim
