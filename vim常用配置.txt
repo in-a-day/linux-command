@@ -11,6 +11,12 @@ set hidden
 runtime macros/matchit.vim
 "关闭vim提示音
 set visualbell
+"关闭查找高亮提示
+set nohlsearch
+"预览查找
+set incsearch
+"开启单词拼写检查
+set spell
 
 
 
