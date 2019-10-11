@@ -4,8 +4,12 @@ set nocompatible
 filetype plugin on
 
 " ==========通用配置==========
-" gui启动最大化
-" au GUIEnter * simalt ~x
+" au GUIEnter * simalt ~x " gui启动最大化
+set guioptions-=T  "remove toolbar
+" set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+set guioptions-=m  "remove menu bar
+
 " 默认编码
 set encoding=utf-8
 set fileencodings=utf-8,chinese,lation-1,gbk,gb18030,gk2312
@@ -58,6 +62,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " 启动界面
 Plug 'mhinz/vim-startify'
+Plug 'altercation/vim-colors-solarized'
 
 " 初始化插件系统
 call plug#end()
@@ -75,7 +80,6 @@ nnoremap <silent> ]B :blast<CR>
 
 set updatetime=300
 set shortmess+=c
-set signcolumn=yes
 
 " use <cr> to confirm completion
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -109,6 +113,10 @@ let g:indentLine_conceallevel = 2
 " 设置顶部buffer状态栏
 " let g:airline#extensions#tabline#enabled = 1
 
+"==========airline==========
+" syntax enable
+" colorscheme solarized
+" set background=dark
 
 " =====================================================================
 runtime macros/matchit.vim
