@@ -10,7 +10,9 @@ set guioptions-=T  "remove toolbar
 set guioptions-=L  "remove left-hand scroll bar
 set guioptions-=m  "remove menu bar
 
-" 默认编码
+" python path
+" set pythonthreedll=D:\CodeProgram\Python\Python3.7.4\python3.dll
+"" 默认编码
 set encoding=utf-8
 set fileencodings=utf-8,chinese,lation-1,gbk,gb18030,gk2312
 set fileencoding=chinese
@@ -62,13 +64,24 @@ Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " 启动界面
 Plug 'mhinz/vim-startify'
+" solarized主题
 Plug 'altercation/vim-colors-solarized'
-
+" 括号补全
+Plug 'jiangmiao/auto-pairs' 
+" git
+Plug 'tpope/vim-fugitive'
+" markdown
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+" markdown-preview
+Plug 'iamcco/markdown-preview.vim', {'for': 'markdown'}
+" ayu-themes
+Plug 'ayu-theme/ayu-vim'
+Plug 'soft-aesthetic/soft-era-vim'
 " 初始化插件系统
 call plug#end()
 
 
-" ==========按键映射==========
+" >>>===================按键映射======================
 
 nnoremap <silent> <C-l> :set hls!<CR>
 nnoremap <silent> [b :bprevious<CR>
@@ -76,7 +89,7 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
-" ===========Coc==============
+" >>>=====================Coc========================
 
 set updatetime=300
 set shortmess+=c
@@ -97,10 +110,10 @@ function! s:check_back_space() abort
 endfunction
 
 
-"==========nerdtree==========
+" >>>=====================nerdtree====================
 nnoremap <silent> <A-1> : NERDTree<CR>
 
-"==========indentLine==========
+" >>>=================indentLine=====================
 
 " let g:indentLine_char = '¦'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -109,16 +122,23 @@ let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
 
 
-"==========airline==========
+" >>>==================airline========================
 " 设置顶部buffer状态栏
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
-"==========airline==========
-" syntax enable
-" colorscheme solarized
-" set background=dark
+">>>===================colorscheme====================
+syntax enable
+set termguicolors     " enable true colors support
+let ayucolor="mirage" " for mirage version of theme
+colorscheme ayu
 
-" =====================================================================
+" >>>================markdown-preview=================
+nmap <silent> <F8> <Plug>MarkdownPreview        " 普通模式
+imap <silent> <F8> <Plug>MarkdownPreview        " 插入模式
+nmap <silent> <F9> <Plug>StopMarkdownPreview    " 普通模式
+imap <silent> <F9> <Plug>StopMarkdownPreview    " 插入模式
+
+"" =====================================================================
 runtime macros/matchit.vim
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
