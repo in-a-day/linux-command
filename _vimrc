@@ -15,7 +15,7 @@ set guioptions-=m  "remove menu bar
 "" 默认编码
 set encoding=utf-8
 set fileencodings=utf-8,chinese,lation-1,gbk,gb18030,gk2312
-set fileencoding=chinese
+set fileencoding=utf-8
 " 默认字体
 set guifont=Fira_Code:h11
 " 删除vim交换文件
