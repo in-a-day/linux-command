@@ -2,6 +2,8 @@
 
 - 选择中国镜像源：
 ```bash
+sudo pacman-mirrors -i -c China -m rank //更新镜像排名
+sudo pacman -Syy //更新数据源
 # 在/etc/pacman.conf中添加以下
 [archlinuxcn]    
 SigLevel = Optional TrustAll    
