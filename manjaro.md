@@ -51,4 +51,8 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 > 在bash中使用vi模式： set -o vi , 写入.bahsrc中持久化
 
 
+##### 软件安装
+- anki 安装：
+> 官网下载linux版本：https://apps.ankiweb.net/
+
 
