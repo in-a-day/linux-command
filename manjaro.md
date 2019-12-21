@@ -38,14 +38,24 @@ export LANG=zh_CN
 - 交换大写及esc键位：在gnome桌面下， 选择tweek工具，选择键盘和鼠标选项， 选中想要交换的键位
 
 - 替换shell为zsh， 并使用oh-my-zsh
-##### 替换默认bash为zsh
+- 替换默认bash为zsh
 ```bash
 chsh -s /bin/zsh
 ```
-##### 安装oh-my-zsh
+- 安装oh-my-zsh
 ```bash
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
+
+- 解决wine qq， idea 等无法输入中文：
+```bash
+# 在其启动脚本中添加以下内容：
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+```
+
+
 > 添加shell快捷键： gnome-terminal(gnome下打开终端命令， 添加快捷键即可)
 
 > 在bash中使用vi模式： set -o vi , 写入.bahsrc中持久化
