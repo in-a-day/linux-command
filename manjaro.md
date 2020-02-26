@@ -1,5 +1,23 @@
 ### manjaro
-
+- virtaulbox 中安装manjaro
+  - 安装完成还会进入boot启动项, 需下拉选择正确的启动
+  - 安装增强功能:
+  ```bash
+  sudo pacman -S virtualbox-guest-iso
+  sudo mount /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso /mnt
+  cd /mnt
+  sudo sh VBoxLinuxAdditions.run
+  报错:
+  This system is currently not set up to build kernel modules.
+  Please install the Linux kernel “header” files matching the current kernel
+  for adding new hardware support to the system.
+  查看内核版本
+  uname -r 
+  选择正确的内核安装
+  sudo pacman -S linux-headers 
+  最后执行
+  sudo sh VBoxLinuxAdditions.run
+  ```
 - 选择中国镜像源：
 ```bash
 sudo pacman-mirrors -i -c China -m rank //更新镜像排名
